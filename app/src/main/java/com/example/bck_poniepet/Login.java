@@ -58,7 +58,7 @@ public class Login extends AppCompatActivity {
 
                             if (passwordFromFB.equals(pass)){
                                 Toast.makeText(getBaseContext(),"Success",Toast.LENGTH_LONG).show();
-                                //startActivity(new Intent(getApplicationContext(),AppActivity.class));
+                                startActivity(new Intent(getApplicationContext(),AppActivity.class));
                                 /*
                                 String fullNameFromFB = snapshot.child(user).child("fullName").getValue(String.class);
                                 String usernameFromFB = snapshot.child(user).child("username").getValue(String.class);

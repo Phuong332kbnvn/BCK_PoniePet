@@ -126,18 +126,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="NEW USER? "
-                    android:textColor="@color/black" />
-
-                <TextView
                     android:id="@+id/tvSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="SIGN UP"
+                    android:text="CREATE ACCOUNT"
                     android:textColor="@color/black" />
             </LinearLayout>
 

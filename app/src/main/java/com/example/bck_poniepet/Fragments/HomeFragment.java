@@ -69,14 +69,14 @@ public class HomeFragment extends Fragment {
         });
 
         adapterRycyclerViewActivity = new AdapterRycyclerViewActivity(getListActivity());
-        RecyclerView.LayoutManager layoutManager =new GridLayoutManager(getContext(),1,RecyclerView.HORIZONTAL,false);
+        RecyclerView.LayoutManager layoutManager =new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false);
         binding.rvActivity.setLayoutManager(layoutManager);
         binding.rvActivity.setAdapter(adapterRycyclerViewActivity);
 
         adapterRycyclerViewActivity.setiActivityOnClick(new IActivityOnClick() {
             @Override
             public void onImageClick(Activity activity) {
-                Toast.makeText(getContext(),activity.getName(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),activity.getName(),Toast.LENGTH_SHORT).show();
             }
         });
 

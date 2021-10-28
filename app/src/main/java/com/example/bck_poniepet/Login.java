@@ -25,7 +25,6 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_login);
         builder = new AlertDialog.Builder(this);
@@ -57,7 +56,7 @@ public class Login extends AppCompatActivity {
                             String passwordFromFB = snapshot.child(user).child("password").getValue(String.class);
 
                             if (passwordFromFB.equals(pass)){
-                                Toast.makeText(getBaseContext(),"Success",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(),"Success",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(),AppActivity.class));
                                 /*
                                 String fullNameFromFB = snapshot.child(user).child("fullName").getValue(String.class);

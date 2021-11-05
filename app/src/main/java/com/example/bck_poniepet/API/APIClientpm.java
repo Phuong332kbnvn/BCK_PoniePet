@@ -9,5 +9,8 @@ import retrofit2.http.GET;
 
 public interface APIClientpm {
     @GET("onProduct")
-    Call<List<Product>> onGetProduct();
+    Call<List<Product>> onGetProductNoiBat();
+
+    @GET("onProduct")
+    Call<List<Product>> onGetProductUuDai();
 }

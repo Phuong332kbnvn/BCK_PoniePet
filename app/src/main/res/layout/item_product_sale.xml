@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="180dp"
     android:layout_height="180dp"
     android:layout_margin="10dp"
-    app:cardCornerRadius="25dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:cardCornerRadius="25dp">
+
     <RelativeLayout
-        android:id="@+id/itemProduct"
+        android:id="@+id/itemProductSale"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <ImageView
             android:id="@+id/ivImageProduct"
             android:layout_width="match_parent"
@@ -22,34 +22,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/white_fill"
-            android:orientation="vertical"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginBottom="10dp"
+            android:background="@color/white_fill"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvNameProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name Product"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/black"/>
+                android:text="Name Product"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tvSalePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:visibility="gone"/>
+                android:text="Sale price" />
+
             <TextView
                 android:id="@+id/tvPriceProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price"
-                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/black"/>
+                android:text="Price"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <ImageButton
@@ -64,8 +65,9 @@
             android:src="@drawable/ic_cart" />
 
         <ImageView
-            android:id="@+id/ivSaleIcon"
+            android:id="@+id/ivSale"
             android:layout_width="100dp"
-            android:layout_height="70dp"/>
+            android:layout_height="70dp"
+            android:src="@drawable/sale"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

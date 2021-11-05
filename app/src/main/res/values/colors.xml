@@ -13,6 +13,6 @@
     <color name="gray">#787878</color>
     <color name="orange">#FFE38D</color>
     <color name="orangepress">#FF9800</color>
-    <color name="orangepress_fill">#DDFF9800</color>
+    <color name="orangepress_fill">#D3FF9800</color>
     <color name="red">#F44336</color>
 </resources>

@@ -16,6 +16,18 @@ public class Product {
     @Expose
     int price;
 
+    @SerializedName("saleprice")
+    @Expose
+    int saleprice;
+
+    @SerializedName("count")
+    @Expose
+    int count;
+
+    @SerializedName("infor")
+    @Expose
+    String infor;
+
     public Product(String image, String name, int price) {
         this.image = image;
         this.name = name;
@@ -44,5 +56,29 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getSaleprice() {
+        return saleprice;
+    }
+
+    public void setSaleprice(int saleprice) {
+        this.saleprice = saleprice;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public String getInfor() {
+        return infor;
+    }
+
+    public void setInfor(String infor) {
+        this.infor = infor;
     }
 }

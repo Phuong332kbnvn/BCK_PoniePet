@@ -17,6 +17,7 @@ import com.example.bck_poniepet.API.APIClient;
 import com.example.bck_poniepet.API.APIClientpm;
 import com.example.bck_poniepet.Adapters.AdapterRecyclerViewSPNB;
 import com.example.bck_poniepet.Adapters.AdapterRecyclerViewSearch;
+import com.example.bck_poniepet.Adapters.AdapterRecyclerViewUDNB;
 import com.example.bck_poniepet.Interfaces.IProductOnClick;
 import com.example.bck_poniepet.Interfaces.ISearchListOnClick;
 import com.example.bck_poniepet.Objects.Product;
@@ -32,13 +33,16 @@ import retrofit2.Response;
 
 public class ShoppingFragment extends Fragment {
     FragmentShoppingBinding binding;
-    List<Product> list;
+    List<Product> list, listSPNB, listUDNB;
+
     AdapterRecyclerViewSearch adapterRecyclerViewSearch;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_shopping,container,false);
 
-        list = new ArrayList<>();
+        listSPNB = new ArrayList<>();
+        listUDNB = new ArrayList<>();
         adapterRecyclerViewSearch = new AdapterRecyclerViewSearch(getListItemSearch());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
         binding.rvSearchList.setLayoutManager(layoutManager);
@@ -58,14 +62,19 @@ public class ShoppingFragment extends Fragment {
             }
         });
 
-        Call<List<Product>> call = APIClient.create().onGetProduct();
-        call.enqueue(new Callback<List<Product>>() {
+        Call<List<Product>> callSPNB = APIClient.create().onGetProductNoiBat();
+        callSPNB.enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
                 list = response.body();
-                AdapterRecyclerViewSPNB adapterRecyclerViewSPNB = new AdapterRecyclerViewSPNB(list);
-                RecyclerView.LayoutManager layoutManager1 = new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false);
-                binding.rvSanPhamNoiBat.setLayoutManager(layoutManager1);
+                for (int i=0; i<list.size(); i++){
+                    if (list.get(i).getPrice() == list.get(i).getSaleprice())
+                        listSPNB.add(list.get(i));
+                }
+
+                AdapterRecyclerViewSPNB adapterRecyclerViewSPNB = new AdapterRecyclerViewSPNB(listSPNB);
+                RecyclerView.LayoutManager layoutManagerSPNB = new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false);
+                binding.rvSanPhamNoiBat.setLayoutManager(layoutManagerSPNB);
                 binding.rvSanPhamNoiBat.setAdapter(adapterRecyclerViewSPNB);
 
                 adapterRecyclerViewSPNB.setiProductOnClick(new IProductOnClick() {
@@ -82,6 +91,8 @@ public class ShoppingFragment extends Fragment {
             }
         });
 
+
+
         binding.tvSeeAllUdnb.setPaintFlags(binding.tvSeeAllUdnb.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         binding.tvSeeAllUdnb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +100,36 @@ public class ShoppingFragment extends Fragment {
                 Toast.makeText(getContext(),"See all",Toast.LENGTH_SHORT).show();
             }
         });
+/*
+        Call<List<Product>> callUDNB = APIClient.create().onGetProductUuDai();
+        callUDNB.enqueue(new Callback<List<Product>>() {
+            @Override
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                list = response.body();
+                for (int i=0; i<list.size(); i++){
+                    if (list.get(i).getPrice() != list.get(i).getSaleprice())
+                        listUDNB.add(list.get(i));
+                }
 
+                AdapterRecyclerViewUDNB adapterRecyclerViewUDNB = new AdapterRecyclerViewUDNB(listUDNB);
+                RecyclerView.LayoutManager layoutManagerUDNB = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
+                binding.rvUuDaiNoiBat.setLayoutManager(layoutManagerUDNB);
+                binding.rvUuDaiNoiBat.setAdapter(adapterRecyclerViewUDNB);
+
+                adapterRecyclerViewUDNB.setiProductOnClick(new IProductOnClick() {
+                    @Override
+                    public void onItemProductClick(Product product) {
+                        Toast.makeText(getContext(),product.getName(),Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(Call<List<Product>> call, Throwable t) {
+                Toast.makeText(getContext(),t.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
+*/
         return binding.getRoot();
     }
 

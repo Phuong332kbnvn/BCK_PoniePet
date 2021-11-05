@@ -1,5 +1,6 @@
 package com.example.bck_poniepet.Adapters;
 
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,12 +38,13 @@ public class AdapterRecyclerViewUDNB extends RecyclerView.Adapter<AdapterRecycle
 
     @Override
     public void onBindViewHolder(Viewholder holder, int position) {
-        holder.saleIcon.setImageResource(R.drawable.sale);
+        holder.saleIcon.setVisibility(View.VISIBLE);
         Glide.with(holder.itemView.getContext()).load(list.get(position).getImage()).into(holder.imageProduct);
         holder.nameProduct.setText(list.get(position).getName());
         holder.priceProduct.setText("₫"+list.get(position).getPrice());
+        holder.priceProduct.setVisibility(View.VISIBLE);
+        holder.priceProduct.setPaintFlags(holder.priceProduct.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         holder.salePrice.setText("₫"+list.get(position).getSaleprice());
-        holder.salePrice.setVisibility(View.VISIBLE);
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

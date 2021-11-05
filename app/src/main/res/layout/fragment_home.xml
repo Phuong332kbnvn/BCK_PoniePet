@@ -89,47 +89,180 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_below="@+id/ablHome"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:orientation="vertical">
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/vpNews"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="5dp" />
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/ablHome"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
 
-                <me.relex.circleindicator.CircleIndicator
-                    android:id="@+id/circle_indicator"
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vpNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="5dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/circle_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        app:ci_drawable="@drawable/custom_circleindicator" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    app:ci_drawable="@drawable/custom_circleindicator" />
+                    android:layout_height="wrap_content"
+                    android:text="Danh mục" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivNhanNuoi"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_nhannuoi" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCuuHo"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_cuuho" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivTinhNguyenVien"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_volunteer" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCamNang"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_camnang" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivHoiDap"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_hoi" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivUngHo"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_ungho" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivNhaTaiTro"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_nhataitro" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivLienHe"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_contact" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
             </LinearLayout>
-
-            <TextView
-                style="@style/TextAppearance.AppCompat.Title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Danh mục" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
-
-        </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </layout>

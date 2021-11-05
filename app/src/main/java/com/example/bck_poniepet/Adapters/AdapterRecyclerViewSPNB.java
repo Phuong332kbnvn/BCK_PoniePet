@@ -17,6 +17,7 @@ import android.content.res.Resources;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -73,7 +74,7 @@ public class AdapterRecyclerViewSPNB extends RecyclerView.Adapter<AdapterRecycle
     public void onBindViewHolder(Viewholder holder, int position) {
         Glide.with(holder.itemView.getContext()).load(list.get(position).getImage()).into(holder.imageProduct);
         holder.nameProduct.setText(list.get(position).getName());
-        holder.priceProduct.setText("₫"+list.get(position).getPrice());
+        holder.priceProduct.setText("₫"+list.get(position).getSaleprice());
 
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +97,7 @@ public class AdapterRecyclerViewSPNB extends RecyclerView.Adapter<AdapterRecycle
             super(itemView);
             imageProduct = itemView.findViewById(R.id.ivImageProduct);
             nameProduct = itemView.findViewById(R.id.tvNameProduct);
-            priceProduct = itemView.findViewById(R.id.tvPriceProduct);
+            priceProduct = itemView.findViewById(R.id.tvSalePrice);
             item = itemView.findViewById(R.id.itemProduct);
         }
     }

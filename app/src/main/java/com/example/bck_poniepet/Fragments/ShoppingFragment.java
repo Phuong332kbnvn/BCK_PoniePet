@@ -74,6 +74,7 @@ public class ShoppingFragment extends Fragment {
 
                 AdapterRecyclerViewSPNB adapterRecyclerViewSPNB = new AdapterRecyclerViewSPNB(listSPNB);
                 RecyclerView.LayoutManager layoutManagerSPNB = new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false);
+                // RecyclerView.LayoutManager layoutManagerSPNB = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
                 binding.rvSanPhamNoiBat.setLayoutManager(layoutManagerSPNB);
                 binding.rvSanPhamNoiBat.setAdapter(adapterRecyclerViewSPNB);
 
@@ -100,7 +101,7 @@ public class ShoppingFragment extends Fragment {
                 Toast.makeText(getContext(),"See all",Toast.LENGTH_SHORT).show();
             }
         });
-/*
+
         Call<List<Product>> callUDNB = APIClient.create().onGetProductUuDai();
         callUDNB.enqueue(new Callback<List<Product>>() {
             @Override
@@ -129,7 +130,7 @@ public class ShoppingFragment extends Fragment {
                 Toast.makeText(getContext(),t.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
-*/
+
         return binding.getRoot();
     }
 

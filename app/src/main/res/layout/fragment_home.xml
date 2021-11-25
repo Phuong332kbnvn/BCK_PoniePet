@@ -107,11 +107,19 @@
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
 
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/vpNews"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="5dp" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="8dp"
+                        android:layout_margin="8dp">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vpNews"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="5dp" />
+                    </androidx.cardview.widget.CardView>
 
                     <me.relex.circleindicator.CircleIndicator
                         android:id="@+id/circle_indicator"

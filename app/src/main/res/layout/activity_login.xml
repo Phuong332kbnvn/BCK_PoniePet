@@ -25,7 +25,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/boogaloo"
-                    android:text="Hello there!"
+                    android:text="Xin chào!"
                     android:textColor="@color/black"
                     android:textSize="60sp"
                     android:textStyle="bold" />
@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_higuy"
-                    android:text="Login back into your acount"
+                    android:text="Đăng nhập để cùng tham gia nhé"
                     android:textSize="18dp" />
             </RelativeLayout>
 
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:background="@color/fill"
-                android:text="Forgot password?" />
+                android:text="Quên mật khẩu?" />
 
             <Button
                 android:id="@+id/btnLogin"
@@ -117,7 +117,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/custom_btn_login_go"
-                android:text="Login"
+                android:text="Đăng nhập"
                 android:textColor="@color/white" />
 
             <LinearLayout
@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="CREATE ACCOUNT"
+                    android:text="TẠO TÀI KHOẢN MỚI"
                     android:textColor="@color/black" />
             </LinearLayout>
 

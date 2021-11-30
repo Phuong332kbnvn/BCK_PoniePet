@@ -11,8 +11,13 @@
     <color name="fill">#00000000</color>
     <color name="none">#CEF3F3F3</color>
     <color name="gray">#787878</color>
+    <color name="dark_gray">#4C4C4C</color>
     <color name="orange">#FFE38D</color>
     <color name="orangepress">#FF9800</color>
     <color name="orangepress_fill">#D3FF9800</color>
     <color name="red">#F44336</color>
+    <color name="blue">#4D8EC6</color>
+    <color name="green">#A7DB69</color>
+    <color name="yellow">#FDF077</color>
+
 </resources>

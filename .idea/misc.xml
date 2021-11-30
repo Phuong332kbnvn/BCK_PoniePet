@@ -8,13 +8,24 @@
         <entry key="..\:/DeproAndroid44/Classes/BCK_PoniePet/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/DeproAndroid44/Classes/BCK_PoniePet/app/src/main/res/layout/activity_sign_up.xml" value="0.10277777777777777" />
         <entry key="..\:/DeproAndroid44/Classes/BCK_PoniePet/app/src/main/res/layout/forget_password_dialog.xml" value="0.10277777777777777" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/custom_bg_blog1.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/custom_bg_blog2.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/custom_bg_blog3.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/custom_bg_blog4.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/custom_bg_profile.xml" value="0.2703125" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/custom_bg_profilr_catalogue.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/ic_edit.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/ic_email_24.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/ic_fullname.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/drawable/ic_signup_success.xml" value="0.262037037037037" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/activity_app.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/activity_sign_up.xml" value="0.24818840579710144" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_blog.xml" value="0.24818840579710144" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_notification.xml" value="0.23278985507246377" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_profile.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/fragment_shopping.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/item_product.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/Documents/GitHub/BCK_PoniePet/app/src/main/res/layout/item_product_sale.xml" value="0.1046875" />

@@ -1,38 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvAvatar"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_centerHorizontal="true"
-        app:cardCornerRadius="50dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:background="@drawable/custom_bg_profile"
+        android:paddingBottom="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="50dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_username"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvAvatar"
+            android:layout_centerHorizontal="true"
+            android:text="Phương Nguyễn" />
+
+        <TextView
+            android:id="@+id/tvBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUsername"
+            android:layout_centerHorizontal="true"
+            android:text="Thêm tiểu sử"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textFontWeight="@integer/material_motion_duration_short_1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_bg_profilr_catalogue"
+            android:text="Thông tin cá nhân" />
         <ImageView
-            android:id="@+id/ivAvatar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/ic_username"/>
-    </androidx.cardview.widget.CardView>
-    <TextView
-        android:id="@+id/tvUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cvAvatar"
-        android:text="Full name"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_centerHorizontal="true"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+
 
     <TextView
-        android:id="@+id/tvBio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvUsername"
-        android:text="Edit Bio"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+        android:drawableLeft="@drawable/ic_fullname_24"
+        android:text="Phương nguyễn"
+        android:textSize="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/dark_gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_email_24"
+        android:text="Phuong332kbnvn@gmail.com"
+        android:textSize="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/dark_gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_phone"
+        android:text="094 611 9576"
+        android:textSize="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/dark_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quản lý tài khoản"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:background="@drawable/custom_bg_profilr_catalogue"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_setting"
+        android:text="Cài đặt"
+        android:textSize="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/dark_gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_chinhsach"
+        android:text="Chính sách"
+        android:textSize="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/dark_gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_logout"
+        android:text="Đăng xuất"
+        android:textSize="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/dark_gray"/>
+</LinearLayout>
 </layout>
